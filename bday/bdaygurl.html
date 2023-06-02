@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: lightgray;
+            background-size: cover;
+            background-position: center;
+            font-family: Roboto, sans-serif;
+        }
+        
+        .birthday-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .birthday-card h2 {
+            color: #ff6f69;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .birthday-card p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .birthday-card img {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .birthday-card button {
+            background-color: #ff6f69;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .birthday-card button:hover {
+            background-color: #ff5349;
+        }
+        
+        .confetti {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .confetti:before,
+        .confetti:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6f69;
+            transform-origin: 0 100%;
+            transform: translate(-50%, 0) rotate(-45deg);
+            animation: confetti 3s ease-in-out infinite;
+        }
+        
+        .confetti:before {
+            transform: translate(-50%, 0) rotate(-45deg);
+            animation-delay: -0.2s;
+        }
+        
+        .confetti:after {
+            transform: translate(-50%, 0) rotate(-45deg);
+            animation-delay: -0.4s;
+        }
+        
+        @keyframes confetti {
+            0% {
+                transform: translate(-50%, 0) rotate(-45deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, 100vh) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Media queries untuk ukuran layar kecil */
+        @media (max-width: 600px) {
+            .birthday-card {
+                max-width: 90%;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        function redirectToNewPage() {
+            window.location.href = "next.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="confetti">
+        <div class="birthday-card">
+            <img src="birthday.png" alt="Happy Birthday">
+            <audio controls autoplay loop>
+                <source src="orchestra.mp3" type="audio/mpeg">
+            </audio>
+            <h2>Selamat Ulang Tahun!</h2>
+            <p>Semoga hari ulang tahunmu penuh dengan kebahagiaan dan keceriaan. Nikmati setiap momennya!</p>
+            <button onclick="redirectToNewPage()">Your Gift Here!!</button>
+        </div>
+   
